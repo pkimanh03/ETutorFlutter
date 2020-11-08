@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 abstract class AccountService {
   static Account currentAccount;
 
-  static String local = 'http://10.0.0.2:8080/ETutor/api';
+  static String local = 'https://etutorapisp.azurewebsites.net/etutor/api';
 
   static Future<Account> getAccountBalance(BuildContext context) async {
     return HttpService.getWithAuth(

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 abstract class SlotService {
   static List<DayItem> currentListDayItem;
   static Map<String, Map<String, String>> selectedClasshour;
-  static String local = 'http://10.0.0.2:8080/ETutor/api';
+  static String local = 'https://etutorapisp.azurewebsites.net/etutor/api';
   static void toggleSlot(String slotId, DateTime date) {
     if (selectedClasshour == null) {
       selectedClasshour = Map();

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 abstract class StudentService {
   static Student currentStudent;
   static StudentQR studentReceiverQR;
-  static String local = 'http://10.0.0.2:8080/ETutor/api';
+  static String local = 'https://etutorapisp.azurewebsites.net/etutor/api';
   static Future<bool> signUp(BuildContext context, StudentCM studentCM) async {
     print('signUp');
     print(local);

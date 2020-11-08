@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 abstract class NotificationService {
   static List<NotificationItem> currentListNotificationItems;
 
-  static String local = 'http://10.0.0.2:8080/ETutor/api';
+  static String local = 'https://etutorapisp.azurewebsites.net/etutor/api';
   static Future<List<NotificationItem>> getListNotificationItems(
       BuildContext context, String topic) async {
     return HttpService.getWithAuth(

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 abstract class TutorService {
   static List<TutorMatching> currentListTutorMatching;
-  static String local = 'http://10.0.0.2:8080/ETutor/api';
+  static String local = 'https://etutorapisp.azurewebsites.net/etutor/api';
   static Future<List<TutorMatching>> matchingTutorCourse(
       BuildContext context, TutorRequirement tutorRequirement) async {
     return HttpService.postWithAuth(

@@ -25,7 +25,7 @@ abstract class AuthenticationService {
   static final String ACCESS_TOKEN =
       'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdHVkZW50MUBldHV0b3IudG9wIiwiaWF0IjoxNjA0MTkzMjc0LCJleHAiOjE2MDQ0OTkyNTR9.CCHFesIt6LGRu94eeTl_OTLSoKGXs_HfsgjLdYWsSzqPKX08wplbpvoRGs_PtjbMiFP4EIT0Xfmyj0CZk3hmKQ';
 
-  static String local = 'http://10.0.0.2:8080/ETutor/api';
+  static String local = 'https://etutorapisp.azurewebsites.net/etutor/api';
   //
   // Auth APIs
   //
@@ -51,13 +51,13 @@ abstract class AuthenticationService {
       {String email, String password}) async {
     print('sigin auth');
     try {
-      // AuthResult authResult = await _firebaseAuth.signInWithEmailAndPassword(
-      //     email: email, password: password);
-      // FirebaseUser firebaseUser = authResult.user;
+      AuthResult authResult = await _firebaseAuth.signInWithEmailAndPassword(
+          email: email, password: password);
+      FirebaseUser firebaseUser = authResult.user;
       // updateUserData(firebaseUser);
-      // return signInEtutorWithGmail(context, firebaseUser: firebaseUser);
+      return signInEtutorWithGmail(context, firebaseUser: firebaseUser);
       // return HttpService.postWithAuth(context, url);
-      return signinEtutorWithEmailPassword(context, email, password);
+      // return signinEtutorWithEmailPassword(context, email, password);
     } catch (exception) {
       if (exception is PlatformException) {
         print('${exception.message}: ${exception.details}');
